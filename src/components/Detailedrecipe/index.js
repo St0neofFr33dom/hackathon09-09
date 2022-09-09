@@ -8,6 +8,7 @@ export default function Detailedrecipe({
   glutenfree,
   vegan,
   vegetarian,
+  price,
 }) {
   return (
     <div id="myModal" className="modal">
@@ -17,12 +18,14 @@ export default function Detailedrecipe({
         </span>
         <h1>{name}</h1>
         <img src={image} alt={name} />
+        <h3>Dietary Requirements</h3>
         <ul>
-          {dairyfree && <li>dairyfree</li>}
-          <li>gluten free</li>
-          <li>vegan</li>
-          <li>vegetarian</li>
+          {dairyfree && <li>Dairy Free</li>}
+          {glutenfree && <li>Gluten Free</li>}
+          {vegan && <li>Vegan</li>}
+         {vegetarian && <li>Vegetarian</li>}
         </ul>
+        <h3>Price : £{((price/100)*4).toFixed(2)}</h3>
       </div>
     </div>
   );
