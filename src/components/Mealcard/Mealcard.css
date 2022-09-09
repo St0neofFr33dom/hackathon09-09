@@ -2,16 +2,21 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: column;
     width: 20vw;
+    min-width: 100px;
+    margin: auto;
     height: 12vw;
-    border: solid 5px black
+    border: solid 5px black;
+    padding: 0.5rem;
+    overflow: hidden;
 }
 
 .Mealcard-name{
-    font-size: smaller;
+    font-size: 0.6rem;
 }
 
 .Mealcard-image{
     width: 50%;
-    height: 90%
+    /* height: 90% */
 }

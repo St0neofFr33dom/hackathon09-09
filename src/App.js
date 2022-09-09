@@ -27,7 +27,7 @@ if(!recipes){
      <Detailedrecipe />
      <Search />
      <button onClick={(()=>{console.log(recipes)})}>Get Data</button>
-     <div>
+     <div className='cardContainer'>
 {recipes.results.map(recipe=>{return <Mealcard key={recipe.id} name={recipe.title} url={recipe.image} alt={recipe.title}/>})
 }
      </div>
