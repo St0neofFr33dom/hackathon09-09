@@ -6,9 +6,13 @@ import Navbar from './components/Navbar';
 import Search from './components/Search';
 
 
+
+
 function App() {
  const [recipes, setRecipes] = useState()
 
+const [modalOpen, setModalOpen] = useState(false)
+ 
 useEffect(() =>{
   function getData(){
     fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_APIKEY}&cuisine=italian`)
@@ -18,21 +22,30 @@ useEffect(() =>{
   getData()
 },[])
   
+function getDetails(){
+  setModalOpen(true)
+  console.log("I've been clicked")
+}
+
+function closeModal(){
+  setModalOpen(false)
+}
 if(!recipes){
   return <h1>Loading...</h1>
 }
   return (
     <div className="App">
      <Navbar />
-     <Detailedrecipe />
+     
      <Search />
      <button onClick={(()=>{console.log(recipes)})}>Get Data</button>
      <div className='cardContainer'>
-{recipes.results.map(recipe=>{return <Mealcard key={recipe.id} name={recipe.title} url={recipe.image} alt={recipe.title}/>})
+{recipes.results.map(recipe=>{return <Mealcard key={recipe.id} name={recipe.title} url={recipe.image} alt={recipe.title} onClick={getDetails}/>})
 }
      </div>
 
-     
+
+    {modalOpen && <Detailedrecipe closeModal={closeModal}/>}
     </div>
   );
 }
