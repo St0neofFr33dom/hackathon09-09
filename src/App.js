@@ -42,7 +42,9 @@ function closeModal(){
   setModalOpen(false)
 }
 if(!recipes){
-  return <h1>Loading...</h1>
+  return <main>
+    <h1>Loading...</h1>
+  </main>
 }
   return (
     <div className="App">
