@@ -25,6 +25,11 @@ useEffect(() =>{
 },[])
   
 function getDetails(){
+  let id = 716429;
+  fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_APIKEY}&cuisine=italian`)
+    .then((response) => response.json())
+    .then((data) => setDetailedRecipe(data));
+    console.log(detailedRecipe);
   setModalOpen(true)
   console.log("I've been clicked")
 }
@@ -47,7 +52,7 @@ if(!recipes){
      </div>
 
 
-    {modalOpen && <Detailedrecipe closeModal={closeModal}/>}
+    {modalOpen && <Detailedrecipe closeModal={closeModal} name={detailedRecipe.title} dairyfree={detailedRecipe.dairyFree} glutenfree={detailedRecipe.glutenFree} vegan={detailedRecipe.vegan} vegetarian={detailedRecipe.vegetarian}/>}
     </div>
   );
 }
