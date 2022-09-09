@@ -1,0 +1,17 @@
+.Mealcard-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20vw;
+    height: 12vw;
+    border: solid 5px black
+}
+
+.Mealcard-name{
+    font-size: smaller;
+}
+
+.Mealcard-image{
+    width: 50%;
+    height: 90%
+}

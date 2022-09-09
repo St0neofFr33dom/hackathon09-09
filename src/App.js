@@ -8,11 +8,10 @@ import Search from './components/Search';
 function App() {
   return (
     <div className="App">
-     <h1>Hello</h1>
      <Navbar />
      <Detailedrecipe />
      <Search />
-     <Mealcard />
+     <Mealcard name="Spaghetti Bolognase" url="https://static.fanpage.it/wp-content/uploads/sites/22/2021/06/spaghetti-bolognese.jpg" alt="Spaghetti Bolgonase"/>
 
     </div>
   );

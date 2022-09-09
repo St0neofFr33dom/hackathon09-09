@@ -1,7 +1,11 @@
 import React from 'react'
+import "./Mealcard.css"
 
-export default function Mealcard() {
+export default function Mealcard({name,url, alt}) {
   return (
-    <div>Mealcard</div>
+    <div className="Mealcard-container">
+      <h3 className="Mealcard-name">{name}</h3>
+      <img src={url} alt={alt} className="Mealcard-image"/>
+    </div>
   )
 }

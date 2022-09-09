@@ -1,0 +1,8 @@
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 2rem;
+    background-color: green;
+}
