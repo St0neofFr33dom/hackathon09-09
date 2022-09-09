@@ -1,8 +1,12 @@
 .navbar{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
-    height: 2rem;
+    height: 5rem;
     margin-bottom: 2rem;
     background-color: green;
+}
+
+.navbar_child > img {
+    height: 5rem;
 }

@@ -49,9 +49,7 @@ if(!recipes){
   return (
     <div className="App">
      <Navbar />
-     
-     <Search />
-     <button onClick={(()=>{console.log(recipes)})}>Get Data</button>
+     <h1>Welcome to Donatello's Italian Restaurant</h1> 
      <div className='cardContainer'>
 {recipes.results.map(recipe=>{return <Mealcard key={recipe.id} id={recipe.id} name={recipe.title} url={recipe.image} alt={recipe.title} onClick={getDetails}/>})
 }

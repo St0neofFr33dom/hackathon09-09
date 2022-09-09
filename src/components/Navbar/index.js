@@ -5,10 +5,11 @@ import "./Navbar.css"
 export default function Navbar() {
   return (
     <div className="navbar">
-      <img src="../../../public/logo192.png" alt="Logo"/>
-      <h1>Italian Restuarant</h1>
-      <Hamburger />
-      <Basket />
+      <img src={require("../../assets/logo192.png")} alt="Logo"/>
+      <div className="navbar_child">
+      <img src={require("../../assets/hamburger.jpeg")} alt="hambuger menu"/>
+      <img src={require("../../assets/basket.png")} alt="basket"/>
+      </div>
     </div>
   )
 }
