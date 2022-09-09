@@ -12,6 +12,8 @@ function App() {
  const [recipes, setRecipes] = useState()
 
 const [modalOpen, setModalOpen] = useState(false)
+
+const [detailedRecipe, setDetailedRecipe] = useState(['name:'])
  
 useEffect(() =>{
   function getData(){
